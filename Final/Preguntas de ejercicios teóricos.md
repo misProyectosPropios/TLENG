@@ -1,4 +1,4 @@
-## Teórica 1
+# Teórica 1
 
 1. Dado un AFD $M = \langle Q, \Sigma, \delta, q_0, F\rangle$ , y sea a un símbolo de Σ. Construir otro AFD $M ′$ que acepte el lenguaje $\mathcal{L} = \{ax \in \Sigma^{*} : x \in \mathcal{L}(M )\}$
 2. Indicar verdadero o falso y justificar
@@ -7,7 +7,7 @@
 3. ¿Cuántos AFD hay con |Q| = 2 y |Σ| = 3?
 4. ¿qué pasa si revierto todas las flechas de un AFD ?
 5. ¿qué pasa si invierto estados finales con no finales de un AFND?
-## Respuestas 1
+# Respuestas 1
 
 1- Respuesta
 Dado el $M = \langle Q, \Sigma, \delta, q_0, F\rangle$
@@ -43,3 +43,30 @@ Multiplicando ambos resultados nos quedan ($2^2 * 2^{2 * 3}$)
 4 - Respuesta:
 
 + Si revierto todas las flechas de un AFD, me puede quedar un AFND
+
+5 - Respuesta:
+
++ Si invierto estados finales con no finales obtendría el complemento del lenguaje regular.
+# Teórica 2
+
+1. Dado un AFND $M = \langle Q, \Sigma, \delta, q_0, F\rangle$ , y sea a un símbolo de Σ. Construir otro AFND-$\lambda$ $M′$ tal que  $\mathcal{L}(M) = \mathcal{L}(M')$ y tiene un único estado final
+2. Indicar si es verdadero o falso y justificar
+3. ¿Se puede acotar superiormente cuantas transiciones requiere la aceptación de una palabra en un AFND-$\lambda$?
+4. ¿Puede haber ciclos de transiciones-λ?
+
+# Respuestas 2
+
+1 - Respuesta
+
+Podemos construir un AFND con un estado más en donde todos los estados finales de M apunten por medio de una $\lambda$ hacia ese único estado final del $M'$ obteniendo de esa forma un único estado final
+
+2 - Respuesta
+
+2.1 -
+
+2.2 - 
+
+3 - No, si llega a haber un ciclo de transiciones $\lambda$ puede no terminar nunca. Si no hay ciclos, entonces sería exponencial.
+Si no llega a haber ciclos de transiciones $\lambda$ entonces, la cota superior sería $2^n$
+
+4 - Como haber puede haber, pero decidimos cortarlos haciendo un BFS. y si hay ciclos, los sacamos 
