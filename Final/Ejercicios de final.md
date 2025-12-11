@@ -15,6 +15,15 @@ Le aplico DFS. Si veo un ciclo, sé que va a ser infinito, pues al haber un cicl
 
 4  - Respuesta
 
+Analicemos la situación:
+
++ 2 estados que pueden ser finales o no finales. Es decir $2^2$ opciones
++ $2 * 2$ flechas. Cada una de estas apunta hacia si mismo o hacia el otro estado, es decir:
+	+ $4^2$ opciones
+
+Juntando los 2 datos, tenemos que la cantidad de opciones es:
++ $2^2 * 4^2$
+
 5  - Respuesta
 
 6  - Respuesta
