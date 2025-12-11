@@ -88,7 +88,21 @@ El automata que se genera por revertir la función de transición sigue siendo u
 
 8  - Respuesta
 
-Falso,
+8 - 1
+
+Falso, contra ejemplo HALT. Es una función total de $\mathbb{N}\to\mathbb{N}$, pero no es total computable (ni siquiera es computable).
+
+8 - 2
+
+Sip, devuelve true siempre porque vimos que todas las funciones parcialmente computables las podemos poner en biyección con los naturales (si no hay pass al final)
+
+8 - 3
+
+Debe de serlo, no pensé mucho la respuesta
+
+8 - 4
+
+Diría que sí, suponiendo que no hay $\lambda$
 
 9  - Respuesta
 
