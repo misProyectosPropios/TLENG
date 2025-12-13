@@ -70,3 +70,4 @@ Podemos construir un AFND con un estado más en donde todos los estados finales 
 Si no llega a haber ciclos de transiciones $\lambda$ entonces, la cota superior sería $2^n$
 
 4 - Como haber puede haber, pero decidimos cortarlos haciendo un BFS. y si hay ciclos, los sacamos 
+

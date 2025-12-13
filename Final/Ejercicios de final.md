@@ -104,11 +104,64 @@ Debe de serlo, no pensé mucho la respuesta
 
 Diría que sí, suponiendo que no hay $\lambda$
 
-9  - Respuesta
+9  - **Pregunta**
+
+Sea $A$ el conjunto más pequeño que contiene a todos los conjuntos finito, y está clausurado por union finita intersección finita, y complemento. Mostrar que $A$ está incluido en el conjunto de todos los lenguajes Regulares, pero no coinciden.
+
+ **Respuesta**
+
+$A$ = Set of finites sets of languages / Tiene unión finita, intersección finita y complemento computables (sino consideramos eso, no tiene sentido).
+
+Ahora, vemos queremos ver que:
++ está incluido en el conjunto de todos los lenguajes regulares
++ $\exists$ $L$ lenguaje /   $L \in R \land L \notin A$
+
+Veamos si está incluido en el conjunto de los lenguajes regulares
+
+Como son conjuntos finitos, pueden ser aceptados por un AFD, entonces son regulares.
+
+Ahora, como solamente son conjuntos finitos, podemos ver que un conjunto *infinito* **SÍ** pertenece a los regulares, pero no a $A$ (al ser infinito). Por ejemplo, usemos el lenguaje
+
+$$\{ A^n \text{ }| \text{ } n \geq 0\}$$
+
+que es infinito y regular, pero no está en $A$, al ser infinito
 
 10  - Respuesta
 
 11  - Respuesta
+
+1. Sí, sería computable.
+
+Demostración:
+
+Con esta función, logramos minimizar los inputs sin problemas
+
+```S++
+X1 = programa a minimizar
+---
+
+function noSonIguales(Z1, X1) {
+	X2 = Halt(X1, 0) = Halt(x2, 0)
+	if x2 = 0 {
+		Z2 := 0
+		while STEP(X1, Z2, 0) = 0 and STEP(Z1, Z2, 0) = 0 {
+			Z2++
+		}
+		Z2 := R(SNAP(X1, Z2, 0))[0] = R(SNAP(Z1, Z2, 0))[0]
+	}
+	Y := !Z2 
+}
+
+Z1 := 0
+
+while Z1 < X1 and noSonIguales(Z1, X1)) {
+	Z1++
+}
+Y := Z1
+
+```
+
+
 
 12  - Respuesta
 
@@ -124,5 +177,43 @@ Diría que sí, suponiendo que no hay $\lambda$
 
 18  - Respuesta
 
-19  - Respuesta
+19  - **Pregunta**
 
+Si $A  \subseteq \mathbb{N}$ es computable entonces no es decidible si $A$ es vacío.
+
+ **Respuesta**
+
+Podemos pensarlo como conjunto. Eso sería: 
+
+$$ A = \{ x \in \Sigma^* \text{ }| \text{ } \phi_x  = 0 \}$$
+
+Esto es un conjunto de indices?
+
+Es trivial?
+
++ Existe un caso que lo cumple?
+
+Sí, la función en S++ tal que
+  
+```S++
+Y := 0
+```
+
++ Existe un caso que no lo cumple?
+
+Sí, la función en S++ tal que
+  
+```S++
+Y := 1
+```
+
+Ahora, tenemos que ver si es un conjunto de índices:
+
+Para ser un conjunto de índices si para todo par de programas $P$ y $Q$, tales que $\psi_P^{(1)}  = \psi_Q^{(1)}$ y $\#(P) \in C$, se cumple que $\#(Q) \in C$ .
+
+Sea P y Q tal que $\#(P) \in C \land \psi_P^{(1)}  = \psi_Q^{(1)}$ 
+
+$A = \{ x \in \Sigma^* \text{ }| \text{ } \phi_x  = 0 \}$, $\rightarrow$ $P \in A \to \phi_P  = 0$. 
+Sabemos que $\phi_Q = \phi_P \to \phi_Q = 0$. Entonces, $Q \in A$
+
+Ahora, como es un conjunto de índices, podemos concluir que no es decidible saber si es vacío o no
