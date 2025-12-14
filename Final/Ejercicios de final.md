@@ -231,6 +231,10 @@ $$L = L_1 \cup L_2 = \{a^n.b^n.c^k| n, k \geq 1\} \cup \{a^n.b^k b^n | n, k \geq
 
 4 - 
 
+Si, es decidible si dos autómatas finitos reconocen el mismo lenguaje.
+
+No lo es para autómatas de pila.
+
 13  - Respuesta
 
 14  - Respuesta
