@@ -150,17 +150,18 @@ X1 := programa que computa el conjunto c.e.
 X2 := palabra a averiguar si pertenece al c.e.
 ----
 # se puede hacer esto sin problemas
-for (t, p) do {
-	# p
-	Z1 := Subcadenas
-	Z2 := STEP(X1, t, Z1)
-	Z3 := R(SNAP(X1, t,Z1))[0]
-	if Z2 and Z3 break;
+Z1 := cadenaOn(0)
+for ((t, p); (STEP(X1, t, Z1) and R(SNAP(X1, t,Z1))[0])) not)do {
+	Z1 := cadenaOn(p) #Como las palabras tienen relación 1 a 1 con los naturales no hay problema
 }
 Y := 1
 ```
 
 3 - 
+
+Sí
+
+Podemos obtener todas las particiones de una palabra. De esta palabra, queremos obtener si existe alguna combinación de las palabras 
 
 11  - Respuesta
 
@@ -207,6 +208,28 @@ Para ser computable como aceptadora de palabras debe haber una función total co
 Entonces, ya estaría 
 
 12  - Respuesta
+
+1 - 
+
+Sí, es libre de contexto
+
+2 - 
+
+3 - 
+
+No, los AP reconocen más lenguajes que los APD. 
+
+Contraejemplo
+
+No vimos como justificar que no habría un autómata de pila determinístico que lo aceptaría, pero sirve.
+
+#TODO averigua la teoría de gramáticas y su relación con los APD
+
+Fuente: [stack exchange](https://cs.stackexchange.com/questions/58255/why-dcfl-is-not-closed-under-kleene-star)
+
+$$L = L_1 \cup L_2 = \{a^n.b^n.c^k| n, k \geq 1\} \cup \{a^n.b^k b^n | n, k \geq 0\}$$ 
+
+4 - 
 
 13  - Respuesta
 
