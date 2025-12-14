@@ -5,7 +5,7 @@ Sea $S \subseteq \Sigma^*$ el lenguaje que resulta de intercalar cada palabra de
 
 $$
 S = \left\{
-a_1 \dots a_{2n}
+a_2 \dots a_{n}, a_{1}
 \;\middle|\;
 a_1 a_3 \dots a_{2n-1} \in L,\;
 a_2 a_4 \dots a_{2n} \in L^R
@@ -27,3 +27,5 @@ Sea $\Sigma$ un alfabeto, y sea $A \subseteq \Sigma^*$ computable y sea $B \subs
 
 Ayuda: Recordar que $\mathbb{N}$ tiene relación 1 a 1 con $\Sigma^*$
 Ayuda: Dar las funciones características de $A$, $A^*$, $B$, $B^*$
+
+

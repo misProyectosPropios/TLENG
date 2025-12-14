@@ -69,12 +69,13 @@ Sip, son las mejores máquinas de pila que hay
 
 7.6 - 
 
-Falso, podes tener máquinas de Turing que para reconocer una palabra por ejemplo, hagan un millón de transiciones, mientras que la cadena sea 1.
+Falso, podes tener máquinas de Turing que para reconocer una palabra por ejemplo, pero haga un millón de transiciones * tamaño de la palabra, mientras que la cadena sea 1.
 
 Ejemplo:
 Reconoce todo el lenguaje, pero hace 1.000.000 de transiciones siempre
 ```S++
 Z1 := 1.000.000
+Z1 := Z1 * X1
 while Z1 != 0:
 	Z1--
 Y := 1
@@ -128,6 +129,39 @@ que es infinito y regular, pero no está en $A$, al ser infinito
 
 10  - Respuesta
 
+1 - 
+
+Verdadero
+
+```S++
+Z1 := psi_x1(X3)
+Z2 := psi_x2(X3)
+Y := Z1 and Z2
+```
+
+Ambos determinan si pertenece ó (se cuelga o no pertenece). Si ambos pertenecen, va a pertenecer
+
+2 - 
+
+Sí, podemos hacer un programa en S++ que compute todos los elementos que pertenecen a la clausura de Kleene, sino no pertenece
+
+```S++
+X1 := programa que computa el conjunto c.e.
+X2 := palabra a averiguar si pertenece al c.e.
+----
+# se puede hacer esto sin problemas
+for (t, p) do {
+	# p
+	Z1 := Subcadenas
+	Z2 := STEP(X1, t, Z1)
+	Z3 := R(SNAP(X1, t,Z1))[0]
+	if Z2 and Z3 break;
+}
+Y := 1
+```
+
+3 - 
+
 11  - Respuesta
 
 1. Sí, sería computable.
@@ -162,6 +196,15 @@ Y := Z1
 ```
 
 
+2.
+
+Sí, es computable
+
+**Demostración**:
+
+Para ser computable como aceptadora de palabras debe haber una función total computable que devuelve 1 o 0 según si pertenece al string o no.
+
+Entonces, ya estaría 
 
 12  - Respuesta
 
